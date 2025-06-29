@@ -3,15 +3,15 @@ USE MimarlikOfisiGorevTakipSistemi
 DECLARE @YeniBinaTuru TABLE (BinaTuruID INT);
 DECLARE @YeniBolumler TABLE (BolumlerID INT);
 
--- Bina Türü Ekleme
+-- Bina TÃ¼rÃ¼ Ekleme
 INSERT INTO BinaTurleri(BinaTuru)
 OUTPUT INSERTED.BinaTuruID INTO @YeniBinaTuru
 VALUES ('Okul');
 
--- Bölüm Ekleme
+-- BÃ¶lÃ¼m Ekleme
 INSERT INTO Bolumler(Bolumler)
 OUTPUT INSERTED.BolumlerID INTO @YeniBolumler
-VALUES ('Sýnýf');
+VALUES ('SÄ±nÄ±f');
 
 UPDATE Musteriler
 SET Telefon='05576123049'
@@ -20,8 +20,8 @@ WHERE Ad='Mahmut' AND Soyad='Tan';
 INSERT INTO KisiAdresleri
 (Il, Ilce, Mahalle, Cadde, BinaNo, KatNo, DaireNo)
 VALUES 
-('Kocaeli','Darýca', 'Zincirlikuyu Mah.', 'Kaplan Cad.', 'Aralýk Sok.', 28, 4, 3),
-('Eskiþehir','Ýnönü', 'Ýnönü Mah.', 'Ýstiklal Cad.', 'Özgül Sok.', 26, 2, 1);
+('Kocaeli','DarÄ±ca', 'Zincirlikuyu Mah.', 'Kaplan Cad.', 'AralÄ±k Sok.', 28, 4, 3),
+('EskiÃ¾ehir','Ä°nÃ¶nÃ¼', 'Ä°nÃ¶nÃ¼ Mah.', 'Ä°stiklal Cad.', 'Ã–zgÃ¼l Sok.', 26, 2, 1);
 
 DELETE FROM ZeminEtutculer WHERE Ad='Alp';
 
@@ -31,6 +31,6 @@ WHERE Taban=200 AND Toplam=400;
 
 ------------------------------------------------------
 BEGIN TRANSACTION; 
-UPDATE Gorevler SET Ucret = Ucret - 5000 WHERE GorevAdý = 'Tepe Þantiyesi';
-UPDATE Gorevler SET Ucret = Ucret + 5000 WHERE GorevAdý = 'Belediye Þantiyesi';
+UPDATE Gorevler SET Ucret = Ucret - 5000 WHERE GorevAdÃ½ = 'Tepe Åžantiyesi';
+UPDATE Gorevler SET Ucret = Ucret + 5000 WHERE GorevAdÃ½ = 'Belediye Åžantiyesi';
 COMMIT; 
