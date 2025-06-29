@@ -31,6 +31,6 @@ WHERE Taban=200 AND Toplam=400;
 
 ------------------------------------------------------
 BEGIN TRANSACTION; 
-UPDATE Gorevler SET Ucret = Ucret - 5000 WHERE GorevAdý = 'Tepe Şantiyesi';
-UPDATE Gorevler SET Ucret = Ucret + 5000 WHERE GorevAdý = 'Belediye Şantiyesi';
+UPDATE Gorevler SET Ucret = Ucret - 5000 WHERE GorevAdı = 'Tepe Şantiyesi';
+UPDATE Gorevler SET Ucret = Ucret + 5000 WHERE GorevAdı = 'Belediye Şantiyesi';
 COMMIT; 
