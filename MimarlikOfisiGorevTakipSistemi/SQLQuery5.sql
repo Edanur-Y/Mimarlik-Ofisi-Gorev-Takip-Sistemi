@@ -2,7 +2,7 @@ USE MimarlikOfisiGorevTakipSistemi
 
 CREATE VIEW vw_Gorevler
 AS
-SELECT GorevID, GorevAdý
+SELECT GorevID, GorevAdÄ±
 FROM Gorevler
 WHERE Ucret > 140000;
 
